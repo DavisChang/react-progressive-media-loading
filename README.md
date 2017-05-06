@@ -1,6 +1,14 @@
 # react-progressive-media-loading
 
-# Usage
+## Usage
+
+### 1. npm install
+
+```shell
+$ npm install react-progressive-media-loading --save
+```
+
+### 1. In your component.js
 
 ```js
 
@@ -16,6 +24,8 @@ var component = React.createClass({
   }
 });
 ```
+
+## How to Test, Build, Demo
 
 #### 1. How to test module
 
