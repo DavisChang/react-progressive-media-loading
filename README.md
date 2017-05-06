@@ -8,7 +8,7 @@
 $ npm install react-progressive-media-loading --save
 ```
 
-### 1. In your component.js
+### 2. In your component.js
 
 ```js
 
