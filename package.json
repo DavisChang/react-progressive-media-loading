@@ -2,7 +2,7 @@
   "name": "react-progressive-media-loading",
   "version": "1.0.0",
   "description": "React progressive media loading",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "babel ./src/index.js --out-file ./lib/index.js",
     "prepublish": "npm run build",
