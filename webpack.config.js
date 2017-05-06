@@ -8,17 +8,30 @@ module.exports = {
     app: './app.js',
   },
   output: {
-    path: path.resolve(__dirname, './build'),
     filename: '[name].bundle.js',
+    path: path.resolve(__dirname, './build'),
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          'postcss-loader',
+        ]
       },
     ],
   },

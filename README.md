@@ -25,22 +25,23 @@ var component = React.createClass({
 });
 ```
 
-## How to Test, Build, Demo
+## How to Develop, Test, Build
 
-#### 1. How to test module
+#### 1. How to develop module
+
+```shell
+$ npm run dev
+```
+
+#### 2. How to test module
 
 ```shell
 $ npm run test
 ```
 
-#### 2. How to build module
+#### 3. How to build module
 
 ```shell
 $ npm run build
 ```
 
-#### 3. How to demo app
-
-```shell
-$ npm run demo
-```

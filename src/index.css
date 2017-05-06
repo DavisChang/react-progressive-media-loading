@@ -1,0 +1,9 @@
+@import "normalize.css";
+
+.progress {
+  position: relative;
+
+  & h1 {
+    color: lightskyblue;
+  }
+}

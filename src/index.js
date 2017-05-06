@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './index.css';
 
 class Progress extends React.Component {
   render () {
     return (
-      <div>
+      <div className="progress">
         <h1>Davis npm module react-progressive-media-loading</h1>
         <img src={this.props.imageSrc} />
       </div>

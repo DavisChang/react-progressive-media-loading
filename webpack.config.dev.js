@@ -16,13 +16,26 @@ module.exports = {
     contentBase: path.resolve(__dirname, './demo'),
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+            }
+          },
+          'postcss-loader',
+        ]
       },
     ],
   },
