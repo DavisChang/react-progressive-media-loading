@@ -8,8 +8,12 @@ module.exports = {
     app: './app.js',
   },
   output: {
-    path: path.resolve(__dirname, './build'),
     filename: '[name].bundle.js',
+    path: path.resolve(__dirname, './build/assets'),
+    publicPath: '/assets',
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, './demo'),
   },
   module: {
     loaders: [
