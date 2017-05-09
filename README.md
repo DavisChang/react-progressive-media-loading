@@ -1,5 +1,8 @@
 # react-progressive-media-loading
 
+Demo: https://cdn.rawgit.com/DavisChang/react-progressive-media-loading/master/build/index.html
+
+
 ## Usage
 
 ### 1. npm install

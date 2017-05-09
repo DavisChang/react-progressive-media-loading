@@ -13,7 +13,7 @@ class Main extends React.Component {
     };
 
     return (
-      <div>
+      <div style={{ margin: 'auto', width: '60%' }}>
         <h1>ProgressiveImg Component</h1>
         <a target="_blank" href="#">
           <ProgressiveImg
