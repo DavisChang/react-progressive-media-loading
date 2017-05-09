@@ -43,5 +43,5 @@ $ npm run test
 
 ```shell
 $ npm run build
+$ npm run webpack
 ```
-

@@ -1,9 +1,30 @@
 @import "normalize.css";
 
-.progress {
+:root {
+}
+
+.progressive {
   position: relative;
 
-  & h1 {
-    color: lightskyblue;
+  & .aspect-ratio-fill {
+    width: 100%;
+  }
+
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s linear;
+    width: 100%;
+    height: 100%;
+
+    &.loaded {
+      opacity: 1;
+    }
+  }
+
+  & .small-img {
+    filter: blur(4px);
   }
 }
