@@ -12,17 +12,30 @@ $ npm install react-progressive-media-loading --save
 
 ```js
 
-var ProgresssiveImg = require('react-progressive-media-loading');
+import ProgressiveImg from 'react-progressive-media-loading';
 
-var component = React.createClass({
-  render: function() {
+class Component extends React.Component {
+  render () {
+    const progressiveImgProps = {
+      smallImageSource: 'small.png',
+      normalImageSource: 'normal.png',
+      imgAlt: 'img-alt',
+      aspectRationFill: '50%',
+    };
+
     return (
       <div>
-        <ProgresssiveImg imageSrc={''} />
+        <h1>ProgressiveImg Component</h1>
+        <a target="_blank" href="#">
+          <ProgressiveImg
+            { ...progressiveImgProps }
+          />
+        </a>
       </div>
     );
-  }
-});
+  };
+};
+
 ```
 
 ## How to Develop, Test, Build
