@@ -1,15 +1,16 @@
 'use strict';
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: {
-    app: './app.js',
+    index: './index.js',
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, './build'),
+    path: path.resolve(__dirname, './lib'),
   },
   module: {
     rules: [
@@ -22,24 +23,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            }
-          },
-          'postcss-loader',
-        ]
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            { loader: 'css-loader', options: { importLoaders: 1 } },
+            'postcss-loader'
+          ]
+        }),
       },
     ],
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'commons',
-      filename: 'commons.js',
-      minChunks: 2,
-    }),
+    new ExtractTextPlugin('index.css'),
   ],
 };

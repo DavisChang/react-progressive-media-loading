@@ -4,13 +4,14 @@
   "description": "React progressive media loading",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config.dev.js --host ::",
-    "build": "babel ./src/index.js --out-file ./lib/index.js",
+    "build": "babel ./src/index.js --out-file ./lib/index.js && npm run build-css",
+    "build-css": "webpack -p --config webpack.config.css.js && rm ./lib/index.bundle.js",
     "prepublish": "npm run build",
     "test": "babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha -- test/*.js",
     "cover": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha",
     "coverage": "istanbul cover _mocha -- --ui bdd -R spec -t 5000;open ./coverage/lcov-report/index.html",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | node_modules/.bin/coveralls",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --host ::",
     "webpack-app": "webpack -p --config webpack.config.app.js"
   },
   "devDependencies": {
