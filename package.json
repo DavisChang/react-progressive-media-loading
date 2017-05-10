@@ -11,7 +11,7 @@
     "cover": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha",
     "coverage": "istanbul cover _mocha -- --ui bdd -R spec -t 5000;open ./coverage/lcov-report/index.html",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | node_modules/.bin/coveralls",
-    "webpack": "webpack -p --config webpack.config.js"
+    "webpack-app": "webpack -p --config webpack.config.app.js"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
