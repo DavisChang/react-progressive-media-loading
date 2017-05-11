@@ -41,6 +41,7 @@ module.exports = {
       filename: 'commons.js',
       minChunks: 2,
     }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false

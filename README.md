@@ -41,6 +41,19 @@ class Component extends React.Component {
 
 ```
 
+### 3. component css
+
+```
+.
+├── /build/
+├── /coverage/
+├── /demo/
+├── /lib/          # component css (index.css)
+├── /src/
+├── /test/
+└── package.json
+```
+
 ## How to Develop, Test, Build
 
 #### 1. How to develop module

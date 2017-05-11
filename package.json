@@ -4,7 +4,7 @@
   "description": "React progressive media loading",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel ./src/index.js --out-file ./lib/index.js && npm run build-css",
+    "build": "babel ./src/index.js --out-file ./lib/index.js && npm run build-css && npm run webpack-app",
     "build-css": "webpack -p --config webpack.config.css.js && rm ./lib/index.bundle.js",
     "prepublish": "npm run build",
     "test": "babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha -- test/*.js",
