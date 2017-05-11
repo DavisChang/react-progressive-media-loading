@@ -1,6 +1,6 @@
 {
   "name": "react-progressive-media-loading",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "React progressive media loading",
   "main": "lib/index.js",
   "scripts": {
