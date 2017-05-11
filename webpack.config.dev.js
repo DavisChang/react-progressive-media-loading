@@ -1,4 +1,5 @@
 'use strict';
+
 const path = require('path');
 const webpack = require('webpack');
 
@@ -22,7 +23,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
-        }
+        },
       },
       {
         test: /\.css$/,
@@ -30,7 +31,7 @@ module.exports = {
           'style-loader',
           { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader',
-        ]
+        ],
       },
     ],
   },

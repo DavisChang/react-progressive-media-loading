@@ -1,4 +1,5 @@
 'use strict';
+
 const path = require('path');
 const webpack = require('webpack');
 
@@ -18,7 +19,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
-        }
+        },
       },
       {
         test: /\.css$/,
@@ -28,10 +29,10 @@ module.exports = {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-            }
+            },
           },
           'postcss-loader',
-        ]
+        ],
       },
     ],
   },
@@ -44,8 +45,8 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
-      }
+        warnings: false,
+      },
     }),
   ],
 };

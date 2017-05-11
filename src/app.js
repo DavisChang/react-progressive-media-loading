@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './app.css';
-// import ProgressiveImg from './index.js';
-import ProgressiveImg from '../lib/index.js'; // use build version
-
+import ProgressiveImg from './index.js';
+import ProgressiveImgStyles from './index.css';
 
 class Main extends React.Component {
   render () {

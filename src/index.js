@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './index.css';
 
 const propTypes = {
   smallImageSource: PropTypes.string.isRequired,
@@ -24,6 +23,12 @@ class ProgressiveImg extends React.Component {
     this.onErrorHandler = this.onErrorHandler.bind(this);
   }
 
+  onErrorHandler() {
+    if (this.props.onErrorHandler) {
+      this.props.onErrorHandler();
+    }
+  }
+
   smallImgOnLoad() {
     if (this.props.onLoadHandler) {
       this.props.onLoadHandler();
@@ -38,13 +43,7 @@ class ProgressiveImg extends React.Component {
     this.setState({ normalImgStatus: 'loaded' });
   }
 
-  onErrorHandler() {
-    if (this.props.onErrorHandler) {
-      this.props.onErrorHandler();
-    }
-  }
-
-  render () {
+  render() {
     return (
       <div className="progressive">
         <img

@@ -1,12 +1,13 @@
 'use strict';
+
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: {
-    index: './index.js',
+    app: './app.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -19,7 +20,7 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           presets: ['es2015'],
-        }
+        },
       },
       {
         test: /\.css$/,
@@ -27,8 +28,8 @@ module.exports = {
           fallback: 'style-loader',
           use: [
             { loader: 'css-loader', options: { importLoaders: 1 } },
-            'postcss-loader'
-          ]
+            'postcss-loader',
+          ],
         }),
       },
     ],
