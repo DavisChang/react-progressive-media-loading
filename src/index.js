@@ -1,14 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './index.css';
 
 const propTypes = {
-  smallImageSource: PropTypes.string.isRequired,
-  normalImageSource: PropTypes.string.isRequired,
-  imgAlt: PropTypes.string,
-  aspectRationFill: PropTypes.string,
-  onLoadHandler: PropTypes.func,
-  onErrorHandler: PropTypes.func,
+  smallImageSource: React.PropTypes.string.isRequired,
+  normalImageSource: React.PropTypes.string.isRequired,
+  imgAlt: React.PropTypes.string,
+  aspectRationFill: React.PropTypes.string,
+  onLoadHandler: React.PropTypes.func,
+  onErrorHandler: React.PropTypes.func,
 };
 
 class ProgressiveImg extends React.Component {
