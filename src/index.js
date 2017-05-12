@@ -4,10 +4,16 @@ import PropTypes from 'prop-types';
 const propTypes = {
   smallImageSource: PropTypes.string.isRequired,
   normalImageSource: PropTypes.string.isRequired,
+  aspectRationFill: PropTypes.string.isRequired,
   imgAlt: PropTypes.string,
-  aspectRationFill: PropTypes.string,
   onLoadHandler: PropTypes.func,
   onErrorHandler: PropTypes.func,
+};
+
+const defaultProps = {
+  imgAlt: '',
+  onLoadHandler: () => {},
+  onErrorHandler: () => {},
 };
 
 class ProgressiveImg extends React.Component {
@@ -67,8 +73,9 @@ class ProgressiveImg extends React.Component {
       </div>
     );
   }
-};
+}
 
 ProgressiveImg.propTypes = propTypes;
+ProgressiveImg.defaultProps = defaultProps;
 
 export default ProgressiveImg;
